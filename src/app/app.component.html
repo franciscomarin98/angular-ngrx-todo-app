@@ -1,17 +1,20 @@
-<div class="app" [class.app-dark-theme]="darkTheme" [class.app-light-theme]="!darkTheme" id="app">
+<div class="app"
+     [class.app-dark-theme]="darkTheme"
+     [class.app-light-theme]="!darkTheme"
+>
     <header class="header">
         <div class="header-container">
             <div class="header-main">
                 <h1 class="logo">Todo</h1>
                 <div class="toggle-container" (click)="toggleTheme()">
                     <img *ngIf="!darkTheme"
-                        class="toggle-icon"
-                        src="../assets/images/icon-moon.svg"
-                        alt="light-mode-icon">
+                         class="toggle-icon"
+                         src="../assets/images/icon-moon.svg"
+                         alt="light-mode-icon">
                     <img *ngIf="darkTheme"
-                        class="toggle-icon"
-                        src="../assets/images/icon-sun.svg"
-                        alt="dark-mode-icon">
+                         class="toggle-icon"
+                         src="../assets/images/icon-sun.svg"
+                         alt="dark-mode-icon">
                 </div>
             </div>
             <form class="task" id="form">
@@ -25,7 +28,16 @@
         <div class="main-container">
             <div class="todo-list" id="todo-list">
                 <div class="todo-list__container" id="todo-list__container">
-                    <!-- Add tasks -->
+                    <div class="task task--list">
+                        <button class="button button--tasks-list"></button>
+                        <p class="input">Example test task</p>
+                        <div class="delete-icon-container">
+                            <img
+                                alt="icon-close"
+                                src="../assets/images/icon-cross.svg"
+                                class="delete-icon">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="dynamic-items-container">
@@ -33,12 +45,12 @@
                         <p class="items-left__text"><span id="number-dynamic">0</span> items left</p>
                     </div>
                     <div class="items-status" id="items-status">
-                        <p class="items-status__item" id="all-status">All</p>
-                        <p class="items-status__item" id="active-status">Active</p>
-                        <p class="items-status__item" id="completed-status">Completed</p>
+                        <p class="items-status__item">All</p>
+                        <p class="items-status__item">Active</p>
+                        <p class="items-status__item">Completed</p>
                     </div>
                     <div class="items-cleared">
-                        <p class="items-cleared__text" id="clear-completed">Clear Completed</p>
+                        <p class="items-cleared__text">Clear Completed</p>
                     </div>
                 </div>
             </div>
@@ -46,6 +58,8 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__text">Drag and drop to reorder list</p>
+        <p class="footer__text">
+            Designed by <a href="shorturl.at/tOU03">Yaiza16</a>
+        </p>
     </footer>
 </div>
