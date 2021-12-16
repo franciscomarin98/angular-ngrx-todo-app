@@ -1,0 +1,40 @@
+<div class="app"
+     [class.app-dark-theme]="darkTheme"
+     [class.app-light-theme]="!darkTheme"
+>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-main">
+                <h1 class="logo">Todo</h1>
+                <div class="toggle-container" (click)="toggleTheme()">
+                    <img *ngIf="!darkTheme"
+                         class="toggle-icon"
+                         src="/assets/images/icon-moon.svg"
+                         alt="light-mode-icon">
+                    <img *ngIf="darkTheme"
+                         class="toggle-icon"
+                         src="/assets/images/icon-sun.svg"
+                         alt="dark-mode-icon">
+                </div>
+            </div>
+            <app-todo-add></app-todo-add>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main-container">
+            <div class="todo-list" id="todo-list">
+                <div class="todo-list__container" id="todo-list__container">
+                    <app-todo-item></app-todo-item>
+                </div>
+                <app-todo-footer></app-todo-footer>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            Designed by <a href="shorturl.at/tOU03">Yaiza16</a>
+        </p>
+    </footer>
+</div>
