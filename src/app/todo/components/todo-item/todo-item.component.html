@@ -1,6 +1,9 @@
-<div class="task task--list">
-    <button class="button button--tasks-list"></button>
-    <p class="input">Example test task</p>
+<div class="task task--list" [class.task--completed]="item.completed">
+    <button
+        class="button button--tasks-list"
+        (click)="toggleTodo(item.id)"
+    ></button>
+    <p class="input">{{item.todo}}</p>
     <div class="delete-icon-container">
         <img
             alt="icon-close"

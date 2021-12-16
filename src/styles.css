@@ -381,12 +381,12 @@ input {
 }
 
 .button--tasks-list {
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-out !important;
     cursor: pointer;
 }
 
 .button--tasks-list:hover {
-    border-color: var(--c-gradient-first) var(--c-gradient-first) var(--c-gradient-second) var(--c-gradient-second);
+    border-color: var(--c-gradient-first) var(--c-gradient-first) var(--c-gradient-second) var(--c-gradient-second) !important;
     transform: rotate(-450deg);
 }
 
@@ -408,10 +408,10 @@ input {
     right: 0;
     top: 0;
     bottom: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding-right: 1rem;
     transition: all 0.3s ease-in;
     cursor: pointer;
+    display: none;
 }

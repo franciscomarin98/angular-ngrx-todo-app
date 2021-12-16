@@ -1,4 +1,9 @@
-<form class="task" id="form">
-    <div class="button"></div>
-    <input type="text" class="input" id="input-text" placeholder="Create a new todo...">
+<form class="task" [formGroup]="todoForm" (ngSubmit)="addTodo()">
+<!--    <div class="button"></div>-->
+    <input
+        type="text"
+        class="input"
+        id="input-text"
+        formControlName="txtInput"
+        placeholder="Create a new todo...">
 </form>
